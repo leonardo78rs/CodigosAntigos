@@ -1,8 +1,6 @@
 *** Cadastro.prg
-*** Sistema projetado em Assessoria Contabil Rimax
-***                  por Leonardo Mendes de Oliveira
-*** Funcionando em Rede
-*** 
+*** por Leonardo Mendes de Oliveira
+***
 *** 21 Arquivos PRG
 *** 12 Arquivos DBF {4 de configuracao / 7 de sistema / 1 externo (maladir)}
 *** xx Arquivos Ntx
@@ -60,7 +58,7 @@ mdimp99=1
 IF FILE("VARSCONF.MEM")
    RESTORE FROM VARSCONF.MEM ADDITIVE
 ELSE
-   AVISO("VarsConf.Mem nao encontrado - Assumir† valores padrao")
+   AVISO("VarsConf.Mem nao encontrado - Assumir¬† valores padrao")
    mdc=1
    mdt=0
    mdimp1="LPT1"
@@ -219,9 +217,9 @@ DECLARE XBAN[9]
         XBAN[4]="Altera no. empresa"
         XBAN[5]="Exclui empresa do cadastro"
         XBAN[6]="Declaracoes/Outros"
-        XBAN[7]="Grava Evento de Entrega de Declaraáoes no Historico"
-        XBAN[8]="Grava Evento de Entrega de Declaraáoes no Historico"
-        XBAN[9]="Grava Evento de Entrega de Declaraáoes no Historico"
+        XBAN[7]="Grava Evento de Entrega de Declara‚Ä°oes no Historico"
+        XBAN[8]="Grava Evento de Entrega de Declara‚Ä°oes no Historico"
+        XBAN[9]="Grava Evento de Entrega de Declara‚Ä°oes no Historico"
 
 DECLARE IMPR[6]
 DECLARE XIMPR[6]
@@ -267,7 +265,7 @@ XVARIA=" "
 *** Vetores para udf do dbedit ref.Qualuser
 *******************************************
 vet_user={"QNUM","QNOME","QDATAEN","QDATASA","QHORAEN","QHORASA","QCOMENT"}
-vet2user={"Nß","Comput","DataEnt","DataSai","HoraEn","HoraSai","Coment"}
+vet2user={"N¬ß","Comput","DataEnt","DataSai","HoraEn","HoraSai","Coment"}
 
 **********************************
 **** VARIAVEIS DE COR, MENU, 
@@ -615,7 +613,7 @@ DO WHILE .T.
    	   CASE A=3
                 USE &SHAR90 INDEX &SHAR91
                 CLEAR 
-                DBEDIT(02,00,20,80,vet_user,"UDFDBUSER",,vet2user,"Õ")
+                DBEDIT(02,00,20,80,vet_user,"UDFDBUSER",,vet2user,"√ç")
                 IF FLOCK()
                     *BROWSE()
                 ENDIF
